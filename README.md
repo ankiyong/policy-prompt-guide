@@ -2,6 +2,9 @@
 
 수강생에게 단계별 AI 프롬프트를 제공하는 GitHub Pages용 정적 웹페이지입니다. HTML5 UP의 Multiverse 사진 격자와 하단 메뉴를 참고하고, 사진 확대 기능을 단계별 프롬프트 창으로 교체했습니다.
 
+- 실습 페이지: https://ankiyong.github.io/policy-prompt-guide/
+- 공개 저장소: https://github.com/ankiyong/policy-prompt-guide
+
 ## 구성
 
 - 공통 지침 + 보고서 작성 1~9단계: 총 10개 카드
@@ -31,16 +34,15 @@
 
 입력과 생성 결과는 탭·단계를 이동하거나 창을 닫았다 다시 열어도 현재 페이지 안에서 유지됩니다. 새로고침하거나 페이지를 닫으면 초기화됩니다. 로컬 저장소 저장, 서버 전송, AI 직접 호출은 하지 않습니다. **전체 프롬프트 TXT 다운로드**는 입력 내용이 반영되지 않은 기본 템플릿을 제공합니다.
 
-## GitHub Pages에 올리기
+## GitHub Pages 배포 및 업데이트
 
-1. GitHub에서 사용할 저장소를 준비합니다. 새 저장소 이름의 예시는 `policy-prompt-guide`입니다.
-2. 압축을 푼 **폴더 안의 파일과 하위 폴더 전체**를 저장소 최상위에 업로드하고 커밋합니다. 저장소에서 `index.html`, `assets`, `images`가 바로 보여야 합니다. ZIP 파일 자체를 올리지 마세요.
-3. 저장소의 **Settings → Pages → Build and deployment**로 이동합니다.
-4. **Source → Deploy from a branch**를 선택합니다.
-5. **Branch → main**, **폴더 → /(root)**를 선택하고 **Save**를 누릅니다. 저장소의 기본 브랜치 이름이 다르면 해당 브랜치를 선택합니다.
-6. 배포가 끝나면 Pages 설정에 표시되는 주소를 수강생에게 공유합니다. 일반적인 프로젝트 주소 예시는 `https://사용자명.github.io/policy-prompt-guide/`입니다.
+공개 저장소 `ankiyong/policy-prompt-guide`의 `master` 브랜치 루트를 배포 소스로 사용합니다.
 
-이 파일 묶음은 배포용 소스입니다. GitHub 저장소 생성·업로드·공개 배포는 별도로 진행해야 합니다.
+1. 수정한 배포용 파일을 저장소의 `master` 브랜치에 업로드하고 커밋합니다. 저장소 최상위에 `index.html`, `assets`, `images/steps`, `prompts.txt`, `README.md`, `LICENSE.txt`, `TEMPLATE_README.txt`가 위치하도록 폴더 구조를 유지하세요.
+2. 저장소의 **Settings → Pages → Build and deployment**에서 **Source → Deploy from a branch**, **Branch → master**, **폴더 → /(root)**로 설정합니다.
+3. 배포가 완료되면 https://ankiyong.github.io/policy-prompt-guide/ 에서 반영된 내용을 확인합니다. 해당 주소를 수강생에게 공유하면 됩니다.
+
+기존 데모 JPG, 이미지 시안·원본을 담은 `output` 폴더, ZIP 파일은 배포에 포함하지 않습니다. `tests` 폴더의 Node.js 테스트는 로컬 검증용이며 현재 공개 저장소의 배포 파일에는 포함하지 않았습니다.
 
 공식 안내: https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site
 
@@ -64,6 +66,6 @@
 - 템플릿 작성자: HTML5 UP / @ajlkn
 - 원본 라이선스: Creative Commons Attribution 3.0 Unported. `LICENSE.txt`와 `TEMPLATE_README.txt` 포함.
 - 현재 이미지: 각 단계의 의미를 표현하도록 AI로 생성한 일러스트 10개. 원본 PNG와 픽셀이 동일한 무손실 WebP로 저장했습니다. `prompts.js`의 단계 `id`와 이미지 파일명이 대응합니다.
-- 기존 `images/01.jpg`~`10.jpg`는 HTML5 UP Multiverse 공개 데모 이미지로 보존되어 있지만 현재 화면에서는 사용하지 않습니다. 원본 템플릿 안내의 Unsplash 크레딧은 유지했습니다.
+- 기존 `images/01.jpg`~`10.jpg`는 HTML5 UP Multiverse 공개 데모 이미지로 로컬 작업 폴더에만 보관하며, 공개 저장소와 배포 파일에서 제외했습니다. 현재 화면에서는 사용하지 않습니다. 원본 템플릿 안내의 Unsplash 크레딧은 유지했습니다.
 - 변경 사항: 한국어 학습용 문안, 카드 구성, 접근성 있는 프롬프트 대화상자, 항목별 입력과 프롬프트 생성, 복사·탭·이전/다음 이동, 모바일 배치. 원본 jQuery 사진 확대 플러그인은 새 기능에 맞는 순수 JavaScript로 교체했습니다.
 - 원본의 별도 이미지·글꼴·스크립트 요청 없이 이 파일 묶음만으로 동작합니다. 사용 안내의 원본 사이트 링크는 클릭 시 외부 페이지로 이동합니다.
